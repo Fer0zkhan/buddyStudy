@@ -6,9 +6,9 @@
         <div class="activities__box">
             <div class="activities__boxHeader roomListRoom__header">
                 <a href="{% url 'profile-view' room_message.user.id %}" class="roomListRoom__author">
-                    <div class="avatar avatar--small">
-                        <img src="{{ room_message.user.avatar.url }}"/>
-                    </div>
+{#                    <div class="avatar avatar--small">#}
+{#                        <img src="{{ room_message.user.avatar.url }}"/>#}
+{#                    </div>#}
                     <p>
                         @{{ room_message.user }}
                         <span>{{ room_message.created|timesince }} ago</span>

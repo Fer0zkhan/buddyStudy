@@ -67,9 +67,9 @@
                         <div class="room__hosted">
                             <p>Hosted By</p>
                             <a href="{% url 'profile-view' room.host.id %}" class="room__author">
-                                <div class="avatar avatar--small">
-                                    <img src="{{ room.host.avatar.url }}"/>
-                                </div>
+                                {#                                <div class="avatar avatar--small">#}
+                                {#                                    <img src="{{ room.host.avatar.url }}"/>#}
+                                {#                                </div>#}
                                 <span>@{{ room.host.username }}</span>
                             </a>
                         </div>
@@ -84,10 +84,11 @@
                                 <div class="thread">
                                     <div class="thread__top">
                                         <div class="thread__author">
-                                            <a href="#" class="thread__authorInfo">
-                                                <div class="avatar avatar--small">
-                                                    <img src="{{ room_message.user.avatar.url }}"/>
-                                                </div>
+                                            <a href="{% url 'profile-view' room_message.user.id %}"
+                                               class="thread__authorInfo">
+                                                {#                                                <div class="avatar avatar--small">#}
+                                                {#                                                    <img src="{{ room_message.user.avatar.url }}"/>#}
+                                                {#                                                </div>#}
                                                 <span>@{{ room_message.user.username }}</span>
                                             </a>
                                             <span class="thread__date">{{ room_message.created|timesince }} ago</span>
@@ -130,11 +131,11 @@
                 <div class="participants__list scroll">
                     {% for participant in participants %}
                         <a href="{% url 'profile-view' participant.id %}" class="participant">
-                            <div class="avatar avatar--medium">
-                                <img src="{{ participant.avatar.url }}"/>
-                            </div>
+                            {#                            <div class="avatar avatar--medium">#}
+                            {#                                <img src="{{ participant.avatar.url }}"/>#}
+                            {#                            </div>#}
                             <p>
-                                {{ participant.email }}
+                                {#                                {{ participant.email }}#}
                                 <span>@{{ participant.username }}</span>
                             </p>
                         </a>
