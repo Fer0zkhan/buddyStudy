@@ -1,2 +1,2 @@
 release: python manage.py migrate --noinput
-web: gunicorn islamicFinanceBureau.wsgi --log-file -
+web: gunicorn buddyStudy.wsgi --log-file -
