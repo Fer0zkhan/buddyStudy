@@ -15,7 +15,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-pz)&^om95j73fi+g=6&b+*h*k^_s&%x8y_298_1+u=+xsd094)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 ALLOWED_HOSTS = ['*']
 
